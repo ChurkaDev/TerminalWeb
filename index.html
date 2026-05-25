@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Интерактивное терминальное портфолио для GitHub Pages" />
+  <title>Terminal Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page-shell" aria-label="Терминальное портфолио">
+    <section class="terminal-window" id="terminalWindow" aria-label="Окно терминала">
+      <header class="title-bar" id="titleBar" aria-label="Перетащить окно терминала">
+        <div class="window-controls" aria-hidden="true">
+          <span class="control control-close"></span>
+          <span class="control control-minimize"></span>
+          <span class="control control-expand"></span>
+        </div>
+        <p class="window-title">zsh — guest@arch</p>
+      </header>
+
+      <div class="terminal-body" id="terminalBody" tabindex="0" role="application" aria-label="Интерактивный псевдо-терминал">
+        <div class="terminal-output" id="terminalOutput"></div>
+        <form class="terminal-input-line" id="terminalForm" autocomplete="off" spellcheck="false">
+          <span class="prompt" id="promptLabel">guest@arch:~$</span>
+          <span class="terminal-input" id="terminalInput" role="textbox" aria-label="Введите команду" contenteditable="false"></span>
+        </form>
+      </div>
+
+      <div class="resize-handle resize-right" data-resize="right" aria-hidden="true"></div>
+      <div class="resize-handle resize-bottom" data-resize="bottom" aria-hidden="true"></div>
+      <div class="resize-handle resize-corner" data-resize="corner" aria-hidden="true"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
